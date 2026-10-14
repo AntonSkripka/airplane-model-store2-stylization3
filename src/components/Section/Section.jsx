@@ -1,11 +1,12 @@
 import css from "./Section.module.css"; //! CSS-модулі
+import { Global, TitleLugrasimoBold } from './Section.styled.jsx'; //! Emotion
 
 export default function Section({ children, title }) {
   return (
     <section>
       {title
         ?
-        <h1
+        <TitleLugrasimoBold
         // style={{
         //   marginBottom: 24,
         //   fontSize: '48px',
@@ -16,12 +17,12 @@ export default function Section({ children, title }) {
         // className="title lugrasimoBold"
         // className={css.title}
         // className={`${css.title} ${css.lugrasimoBold}`}
-        className={css.titleLugrasimoBold}
+        // className={css.titleLugrasimoBold}
         >
           {title}
-        </h1>
+        </TitleLugrasimoBold>
         :
-        <h1
+        <TitleLugrasimoBold
         
         // style={{
         //   marginBottom: 24,
@@ -30,10 +31,10 @@ export default function Section({ children, title }) {
         //   color: "darkred",
         // }}
         // className="title"
-        className={css.title}
+        // className={css.title}
         >
           No title
-        </h1>}
+        </TitleLugrasimoBold>}
       {children}
     </section>
   )
