@@ -89,7 +89,7 @@ export default function PlaneItem({
             >
                 {title}
             </h3>
-            <img src={url} alt={fullTitle} width="400" onError={(e) => onErrorImg(e)} />
+            <img src={url} alt={fullTitle} onError={(e) => onErrorImg(e)} />
             <p className={css.textField}><FcTrademark size={iconSize.md} className={css.icon}/>Повна назва: <span className="textFieldValue">{fullTitle}</span></p>
             <p className={css.textField}><GiArmoredBoomerang size={iconSize.md} className={css.icon}/>Тип: <span className="textFieldValue"><GiCommercialAirplane />{type}</span></p>
             <p className={css.textField}><GiCeremonialMask size={iconSize.md} className={css.icon}/>Прізвисько: <span className="textFieldValue">{nickname}</span></p>
