@@ -1,7 +1,7 @@
 // import clsx from "clsx";
 import PlaneItem from "@/components/PlaneItem/PlaneItem"
 import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from "@/utils/getBackgroundColor";
-
+import { PlanesListStyled, PlanesItemStyled } from "./PlanesList.styled";
 import css from "./PlanesList.module.css"; //! CSS-модулі
 // const className = clsx(
 //   "first",
@@ -37,7 +37,7 @@ import css from "./PlanesList.module.css"; //! CSS-модулі
 export default function PlanesList({ items }) {
     console.log(items);
     return (
-        <ul 
+        <PlanesListStyled 
         // style={{
         //         marginLeft: 10,
         //         marginRight: 10,
@@ -47,10 +47,10 @@ export default function PlanesList({ items }) {
         //         gap: 32,
         //         outline: "1px solid red",
         //     }}
-        className={css.planesList}
+        // className={css.planesList}
 >
             {items.map((item) =>
-                <li
+                <PlanesItemStyled
                     key={item.id}
                     // key={index}
                     // style={{
@@ -72,7 +72,7 @@ export default function PlanesList({ items }) {
                     // className={css.planesItem}
                     // className={css.planesItemLast}
                     // className={css.planesItemCurrent}
-                    className={css[getBgColorCSSModule(item.info.year)]}
+                    // className={css[getBgColorCSSModule(item.info.year)]}
                 >
                     <PlaneItem
                         url={item.url.main}
@@ -92,7 +92,7 @@ export default function PlanesList({ items }) {
                         startM={item.manufacturing.start}
                         endM={item.manufacturing.end}
                     />
-                </li>)};
-        </ul>
+                </PlanesItemStyled>)};
+        </PlanesListStyled>
     )
 }

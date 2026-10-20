@@ -28,6 +28,16 @@ import { iconSize } from '@/constants/iconSize.js';
 import { getManufacturingYears } from '@/utils';
 // iconSize.md = 56;
 import css from "./PlaneItem.module.css"; //! CSS-модулі
+import { 
+    PlanesTitleStyled, 
+    TextFieldStyled,
+    TextFieldValueStyled,
+    ImageTitles,
+    ActualImageBox,
+    ActualImageStyled,
+    ItemButtonStyled,
+    IconStyled
+  } from "./PlaneItem.styled";
 // //! Стилі для текстових полів
 // const textField = {
 //     fontSize: '18px',
@@ -75,7 +85,7 @@ export default function PlaneItem({
         <>
             {/* //! Приклад react-icons */ }
 
-            <h3 
+            <PlanesTitleStyled 
             // style={{
             //     marginBottom: 12,
             //     padding: "12px 16px",
@@ -85,35 +95,37 @@ export default function PlaneItem({
             //     backgroundColor: "yellow",
             //     color: "blue",
             // }}
-            className={css.planesTitle}
+            // className={css.planesTitle}
             >
                 {title}
-            </h3>
+            </PlanesTitleStyled>
             <img src={url} alt={fullTitle} onError={(e) => onErrorImg(e)} />
-            <p className={css.textField}><FcTrademark size={iconSize.md} className={css.icon}/>Повна назва: <span className="textFieldValue">{fullTitle}</span></p>
-            <p className={css.textField}><GiArmoredBoomerang size={iconSize.md} className={css.icon}/>Тип: <span className="textFieldValue"><GiCommercialAirplane />{type}</span></p>
-            <p className={css.textField}><GiCeremonialMask size={iconSize.md} className={css.icon}/>Прізвисько: <span className="textFieldValue">{nickname}</span></p>
-            <p className={css.textField}><AiOutlineFlag size={iconSize.md} className={css.icon}/>Країна виробник: <span className="textFieldValue">{country}</span></p>
-            <p className={css.textField}><AiOutlineClockCircle size={iconSize.md} className={css.icon}/>Рік випуску: <span className="textFieldValue">{year}</span></p>
-            <p className={css.textField}><TbClockHour4Filled size={iconSize.md} className={css.icon}/>Тривалість виробництва(в роках): <span className="textFieldValue">{getManufacturingYears(startM, endM)}</span></p>
-            <p className={css.textField}><TbClockHour4Filled size={iconSize.md} className={css.icon}/>Актуальність: <span className="textFieldValue">{(year >= 2000) ? "сучасний" : "минуле століття"}</span></p>
-            <p className={css.textField}><CiBadgeDollar size={iconSize.md} className={css.icon}/>Ціна: <span className="textFieldValue">{price}</span></p>
-            <p className={css.textField}><AiOutlineInfoCircle size={iconSize.md} className={css.icon}/>Опис: <span className="textFieldValue">{description}</span></p>
-            <p className={css.imageTitles}><GiAirplaneDeparture size={iconSize.md}/>Рекламна модель:</p>
+            <TextFieldStyled><FcTrademark size={iconSize.md} className={css.icon}/>Повна назва: <TextFieldValueStyled>{fullTitle}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><GiArmoredBoomerang size={iconSize.md} className={css.icon}/>Тип: <TextFieldValueStyled><GiCommercialAirplane />{type}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><GiCeremonialMask size={iconSize.md} className={css.icon}/>Прізвисько: <TextFieldValueStyled>{nickname}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><AiOutlineFlag size={iconSize.md} className={css.icon}/>Країна виробник: <TextFieldValueStyled>{country}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><AiOutlineClockCircle size={iconSize.md} className={css.icon}/>Рік випуску: <TextFieldValueStyled>{year}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><TbClockHour4Filled size={iconSize.md} className={css.icon}/>Тривалість виробництва(в роках): <TextFieldValueStyled>{getManufacturingYears(startM, endM)}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><TbClockHour4Filled size={iconSize.md} className={css.icon}/>Актуальність: <TextFieldValueStyled>{(year >= 2000) ? "сучасний" : "минуле століття"}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><CiBadgeDollar size={iconSize.md} className={css.icon}/>Ціна: <TextFieldValueStyled>{price}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><AiOutlineInfoCircle size={iconSize.md} className={css.icon}/>Опис: <TextFieldValueStyled>{description}</TextFieldValueStyled></TextFieldStyled>
+            <ImageTitles><GiAirplaneDeparture size={iconSize.md}/>Рекламна модель:</ImageTitles>
             <img src={promotialUrl} alt={fullTitle} width="600" onError={(e) => onErrorImg(e)} />
-            <p className={css.imageTitles}><CiAirportSign1 size={iconSize.md}/>Реальна модель:</p>
-            <div 
-            className={css.actualImageBox}
+            <ImageTitles><CiAirportSign1 size={iconSize.md}/>Реальна модель:</ImageTitles>
+            <ActualImageBox 
+            // className={css.actualImageBox}
             >
                 {realUrl.map((img, index) => {
-                    return (<img className={css.actualImage} key={index}
-                        src={img} alt={fullTitle} width="300" onError={(e) => onErrorImg(e)} />)
+                    return (<ActualImageStyled key={index}
+                        src={img} alt={fullTitle} width="300" onError={(e) => onErrorImg(e)} 
+                        />)
                 })}
-            </div>
+            </ActualImageBox>
             <br />
-            <button 
+            <ItemButtonStyled
                 className={css.itemButton}
-                type="button">Додати до кошику</button>
+                type="button">Додати до кошику
+                </ItemButtonStyled>
         </>
     )
 }

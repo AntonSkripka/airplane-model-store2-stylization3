@@ -1,9 +1,9 @@
 import css from "./Section.module.css"; //! CSS-модулі
-import { TitleLugrasimoBold } from './Section.styled.jsx'; //! Emotion
+import { TitleLugrasimoBold, SectionGlobal } from './Section.styled.jsx'; //! Emotion
 
 export default function Section({ children, title }) {
   return (
-    <section>
+    <SectionGlobal>
       {title
         ?
         <TitleLugrasimoBold
@@ -36,6 +36,6 @@ export default function Section({ children, title }) {
           No title
         </TitleLugrasimoBold>}
       {children}
-    </section>
+    </SectionGlobal>
   )
 }

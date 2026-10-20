@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+export const SectionGlobal = styled.section`
+    display: grid;
+`
+
 export const TitleLugrasimoBold = styled.h1`
     composes: lugrasimoBold;
     margin-bottom: 24px;
