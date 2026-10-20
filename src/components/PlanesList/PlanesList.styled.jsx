@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import {getBgColorEmotion} from "@/utils/getBackgroundColor"
 
 export const PlanesListStyled = styled.ul`
   margin-left: 10px;
@@ -14,7 +15,10 @@ export const PlanesItemStyled = styled.li`
     display: grid;
     gap: 12px;
     padding: 10px;
-    background-color: #ffdb92;
+    //todo: var.1
+    background-color: ${getBgColorEmotion};
+
     outline: 1px solid grey;
+    ${(props) => console.log(props)}
 `
 

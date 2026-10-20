@@ -73,6 +73,7 @@ export default function PlanesList({ items }) {
                     // className={css.planesItemLast}
                     // className={css.planesItemCurrent}
                     // className={css[getBgColorCSSModule(item.info.year)]}
+                    yearOfManufacture={item.info.year}
                 >
                     <PlaneItem
                         url={item.url.main}

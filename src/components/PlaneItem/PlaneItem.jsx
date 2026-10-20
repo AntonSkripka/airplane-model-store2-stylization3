@@ -100,7 +100,7 @@ export default function PlaneItem({
                 {title}
             </PlanesTitleStyled>
             <img src={url} alt={fullTitle} onError={(e) => onErrorImg(e)} />
-            <TextFieldStyled><FcTrademark size={iconSize.md} className={css.icon}/>Повна назва: <TextFieldValueStyled>{fullTitle}</TextFieldValueStyled></TextFieldStyled>
+            <TextFieldStyled><FcTrademark className={css.icon}/>Повна назва: <TextFieldValueStyled>{fullTitle}</TextFieldValueStyled></TextFieldStyled>
             <TextFieldStyled><GiArmoredBoomerang size={iconSize.md} className={css.icon}/>Тип: <TextFieldValueStyled><GiCommercialAirplane />{type}</TextFieldValueStyled></TextFieldStyled>
             <TextFieldStyled><GiCeremonialMask size={iconSize.md} className={css.icon}/>Прізвисько: <TextFieldValueStyled>{nickname}</TextFieldValueStyled></TextFieldStyled>
             <TextFieldStyled><AiOutlineFlag size={iconSize.md} className={css.icon}/>Країна виробник: <TextFieldValueStyled>{country}</TextFieldValueStyled></TextFieldStyled>

@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 
 export const PlanesTitleStyled = styled.h3`
-  margin-bottom: 12px;
+  /*//! Налаштування відступів - spacing */
+  margin-bottom: ${props => props.theme.spacing(3)};
   padding: 12px 16px;
   font-size: 32px;
   text-align: center;
@@ -13,6 +14,12 @@ export const PlanesTitleStyled = styled.h3`
 export const TextFieldStyled = styled.p`
   font-size: 18px;
   font-weight: 700;
+
+  svg {
+        min-width: 28px; 
+        color: #9b25fc; 
+        // width=${(props) => props.theme.iconSize.xlg}
+    }
 `
 
 export const TextFieldValueStyled = styled.span`

@@ -72,3 +72,12 @@ export function getBgColorCSSModule(year) {
     }
     return className;
 }
+
+//todo: Emotion Theme
+export function getBgColorEmotion({ yearOfManufacture, theme }) {
+    // console.log("@emotion/styled_yearOfManufacture:", yearOfManufacture); //!
+    let bgColor = theme.bсgColor.old;
+    if (yearOfManufacture > 1945) bgColor = theme.bсgColor.last;
+    if (yearOfManufacture > 1999) bgColor = theme.bсgColor.now;
+    return bgColor;
+};

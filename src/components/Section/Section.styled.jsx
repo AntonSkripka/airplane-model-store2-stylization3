@@ -9,5 +9,5 @@ export const TitleLugrasimoBold = styled.h1`
     margin-bottom: 24px;
     font-size: 48px;
     text-align: center;
-    color: darkred;
+    color: ${props => props.theme.fontColor.mainTitle};
 `
