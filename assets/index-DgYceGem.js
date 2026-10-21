@@ -30,9 +30,12 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-weight: 700;
 
   svg {
-        min-width: 28px; 
-        color: #9b25fc; 
-        // width=${e=>e.theme.iconSize.xlg}
+        /* min-width: 28px; */
+        min-width: ${e=>e.theme.iconSize.md}px;
+        height: ${e=>e.theme.iconSize.md}px;
+        margin-bottom: -8px;
+        /* color: #9b25fc; */
+        color: ${e=>e.theme.iconColor.textField};
     }
 `,Va=Ni.span`
   font-weight: 400;
@@ -40,6 +43,16 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 `,Ha=Ni.p`
     text-align: center;
     color: blue;
+
+    /*//todo: Налаштування для іконок */
+    svg {
+        margin-bottom: -10px;
+        margin-right: 4px;
+        width: ${e=>e.theme.iconSize.lg}px;
+        height: ${e=>e.theme.iconSize.lg}px;
+        outline: 1px solid red; 
+    }
+
 `,Ua=Ni.div`
   display: flex;
   gap: 10px;
@@ -68,7 +81,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 `;Ni.svg`
     margin-bottom: -8px;
     color: #9b25fc;
-`;function Ka(e){e.target.onError=null,e.target.src=L}function qa({url:e=L,promotialUrl:t=L,realUrl:n,title:r,fullTitle:i,nickname:a,year:o,country:s,type:c,price:l,description:u,startM:d,endM:f}){return console.log(n),(0,F.jsxs)(F.Fragment,{children:[(0,F.jsx)(za,{children:r}),(0,F.jsx)(`img`,{src:e,alt:i,onError:e=>Ka(e)}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(I,{className:Ra.icon}),`Повна назва: `,(0,F.jsx)(Va,{children:i})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(ra,{size:Ci.md,className:Ra.icon}),`Тип: `,(0,F.jsxs)(Va,{children:[(0,F.jsx)(ta,{}),c]})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(na,{size:Ci.md,className:Ra.icon}),`Прізвисько: `,(0,F.jsx)(Va,{children:a})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)($i,{size:Ci.md,className:Ra.icon}),`Країна виробник: `,(0,F.jsx)(Va,{children:s})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(ea,{size:Ci.md,className:Ra.icon}),`Рік випуску: `,(0,F.jsx)(Va,{children:o})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(sa,{size:Ci.md,className:Ra.icon}),`Тривалість виробництва(в роках): `,(0,F.jsx)(Va,{children:La(d,f)})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(sa,{size:Ci.md,className:Ra.icon}),`Актуальність: `,(0,F.jsx)(Va,{children:o>=2e3?`сучасний`:`минуле століття`})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(aa,{size:Ci.md,className:Ra.icon}),`Ціна: `,(0,F.jsx)(Va,{children:l})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(Qi,{size:Ci.md,className:Ra.icon}),`Опис: `,(0,F.jsx)(Va,{children:u})]}),(0,F.jsxs)(Ha,{children:[(0,F.jsx)(ia,{size:Ci.md}),`Рекламна модель:`]}),(0,F.jsx)(`img`,{src:t,alt:i,width:`600`,onError:e=>Ka(e)}),(0,F.jsxs)(Ha,{children:[(0,F.jsx)(oa,{size:Ci.md}),`Реальна модель:`]}),(0,F.jsx)(Ua,{children:n.map((e,t)=>(0,F.jsx)(Wa,{src:e,alt:i,width:`300`,onError:e=>Ka(e)},t))}),(0,F.jsx)(`br`,{}),(0,F.jsx)(Ga,{className:Ra.itemButton,type:`button`,children:`Додати до кошику`})]})}var Ja=Ni.ul`
+`;function Ka(e){e.target.onError=null,e.target.src=L}function qa({url:e=L,promotialUrl:t=L,realUrl:n,title:r,fullTitle:i,nickname:a,year:o,country:s,type:c,price:l,description:u,startM:d,endM:f}){return console.log(n),(0,F.jsxs)(F.Fragment,{children:[(0,F.jsx)(za,{children:r}),(0,F.jsx)(`img`,{src:e,alt:i,onError:e=>Ka(e)}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(I,{size:Ci.md,className:Ra.icon}),`Повна назва: `,(0,F.jsx)(Va,{children:i})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(ra,{size:Ci.md,className:Ra.icon}),`Тип: `,(0,F.jsxs)(Va,{children:[(0,F.jsx)(ta,{}),c]})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(na,{size:Ci.md,className:Ra.icon}),`Прізвисько: `,(0,F.jsx)(Va,{children:a})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)($i,{size:Ci.md,className:Ra.icon}),`Країна виробник: `,(0,F.jsx)(Va,{children:s})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(ea,{size:Ci.md,className:Ra.icon}),`Рік випуску: `,(0,F.jsx)(Va,{children:o})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(sa,{size:Ci.md,className:Ra.icon}),`Тривалість виробництва(в роках): `,(0,F.jsx)(Va,{children:La(d,f)})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(sa,{size:Ci.md,className:Ra.icon}),`Актуальність: `,(0,F.jsx)(Va,{children:o>=2e3?`сучасний`:`минуле століття`})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(aa,{size:Ci.md,className:Ra.icon}),`Ціна: `,(0,F.jsx)(Va,{children:l})]}),(0,F.jsxs)(Ba,{children:[(0,F.jsx)(Qi,{size:Ci.md,className:Ra.icon}),`Опис: `,(0,F.jsx)(Va,{children:u})]}),(0,F.jsxs)(Ha,{children:[(0,F.jsx)(ia,{size:Ci.md}),`Рекламна модель:`]}),(0,F.jsx)(`img`,{src:t,alt:i,width:`600`,onError:e=>Ka(e)}),(0,F.jsxs)(Ha,{children:[(0,F.jsx)(oa,{}),`Реальна модель:`]}),(0,F.jsx)(Ua,{children:n.map((e,t)=>(0,F.jsx)(Wa,{src:e,alt:i,width:`300`,onError:e=>Ka(e)},t))}),(0,F.jsx)(`br`,{}),(0,F.jsx)(Ga,{className:Ra.itemButton,type:`button`,children:`Додати до кошику`})]})}var Ja=Ni.ul`
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px;
