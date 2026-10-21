@@ -16,9 +16,12 @@ export const TextFieldStyled = styled.p`
   font-weight: 700;
 
   svg {
-        min-width: 28px; 
-        color: #9b25fc; 
-        // width=${(props) => props.theme.iconSize.xlg}
+        /* min-width: 28px; */
+        min-width: ${props => props.theme.iconSize.md}px;
+        height: ${props => props.theme.iconSize.md}px;
+        margin-bottom: -8px;
+        /* color: #9b25fc; */
+        color: ${props => props.theme.iconColor.textField};
     }
 `
 
@@ -30,6 +33,16 @@ export const TextFieldValueStyled = styled.span`
 export const ImageTitles = styled.p`
     text-align: center;
     color: blue;
+
+    /*//todo: Налаштування для іконок */
+    svg {
+        margin-bottom: -10px;
+        margin-right: 4px;
+        width: ${props => props.theme.iconSize.lg}px;
+        height: ${props => props.theme.iconSize.lg}px;
+        outline: 1px solid red; 
+    }
+
 `
 
 export const ActualImageBox = styled.div`
